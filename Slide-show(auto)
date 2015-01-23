@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <script type="application/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+<style>
+    .sized{
+        width: 100px;
+        float: left;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <img class="img-thumbnail sized" src="pic/1.jpeg">
+    <img class="img-thumbnail sized" src="pic/2.jpeg">
+    <img class="img-thumbnail sized" src="pic/3.jpeg">
+    <img class="img-thumbnail sized" src="pic/4.jpeg">
+    <img class="img-thumbnail sized" src="pic/5.jpeg">
+
+    <button id="button">Next</button>
+</div>
+
+<div class="container">
+    <img id="frameimg" class="img-thumbnail" src="pic/1.jpeg">
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+
+    var i=1;
+    $('#button').click(function(){
+        setInterval(function() {
+
+
+            i++;
+            if (i == 6) i = 1;
+            var url = 'pic/' + i + '.jpeg';
+            $('#frameimg').attr('src', url);
+
+
+        },1000);
+
+    });
+    });
+
+</script>
+</body>
+</html>
