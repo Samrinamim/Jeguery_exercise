@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!--<title>jQuery UI Datepicker - Format date</title>-->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <!--<link rel="stylesheet" href="/resources/demos/style.css">-->
+    </head>
+<body>
+
+<form>
+    FullName:<br>
+    <input type="text" name="fullname">
+    <br>
+
+    <input type="button"  id='press'value="button">
+    <input type="button"  id='mouse'value="button">
+
+    <!--<input type="button"  value="button">-->
+
+
+
+</form>
+
+<p>If you click "Submit", the form-data will be sent to a page called "action_page.php".</p>
+</form>
+
+<script>
+    $(document).ready(function() {
+
+        $( '#press').bind({
+            "click": function () {
+                alert("clicked!");
+            }
+        });
+
+            $( '#mouse').bind({
+                "mouseover": function () {
+                    alert("hovered!");
+                }
+            });
+
+//
+//        $('#press').click(function(){
+//            alert("I want to sleep");
+//
+//        });
+
+//        window.onload(
+//        alert("I want to sleep"));
+
+    });
+
+</script>
+
+
+</body>
+</html>
